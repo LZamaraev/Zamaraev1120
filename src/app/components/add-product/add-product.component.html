@@ -1,0 +1,17 @@
+<div class="row mb-3 ml-3">
+    <div class="col-12">
+        <h5>Добавить продукты в список</h5>
+    </div>
+    <form [formGroup]="myProductForm">
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" placeholder="Название"
+            formControlName="title" [(ngModel)]="title">
+        </div>
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" placeholder="Количество"
+            formControlName="count" [(ngModel)]="count">
+        </div>
+        <div class="col-12 mt-2"><button [disabled]="myProductForm.invalid"
+        class="btn-primary btn-sm" (click)="onAddProduct()">Добавить</button></div>
+    </form>
+</div>

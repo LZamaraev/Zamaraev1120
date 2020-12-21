@@ -1,0 +1,39 @@
+<div class="row" *ngIf="products.length>0">
+    <div class="col-12 ml-4 mt-2">
+        <h5>{{title}}</h5>
+    </div>
+    <table class="table ml-4">
+        <thead>
+            <tr>
+                <th scope="col" [style.width]="'350px'">id</th>
+                <th scope="col" [style.width]="'350px'">Название</th>
+                <th scope="col" [style.width]="'350px'">Количество</th>
+                <th scope="col" [style.width]="'350px'">Статус</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let product of products">
+            <ng-container *ngIf="product.status; else elseTemplate1">
+                <tr>
+                    <th scope="row">{{product.id}}</th>
+                    <td>{{product.title}}</td>
+                    <td>{{product.count}}</td>
+                    <td>Куплено</td>
+                    <button class="btn btn-success btn-sm mt-2" (click)="onChangeStatusProduct1(product.id)"
+                    >Продать</button>
+                </tr>
+            </ng-container>
+            <ng-template #elseTemplate1>
+                <tr style="background-color: aqua;">
+                <th scope="row">{{product.id}}</th>
+                <td>{{product.title}}</td>
+                <td>{{product.count}}</td>
+                <td>Некуплено</td>
+                <button class="btn btn-danger btn-sm mt-2" (click)="onChangeStatusProduct2(product.id)"
+                >Купить</button>
+                </tr>
+            </ng-template>
+        </ng-container>
+        </tbody>
+    </table>
+</div>

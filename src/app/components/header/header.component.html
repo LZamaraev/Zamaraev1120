@@ -1,0 +1,29 @@
+<header>
+<nav class='navbar navbar-expand-lg navbar-light bg-light'>
+    <a class='navbar-brand' [routerLink]="'/'">Zamaraev1120</a>
+    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNaw'
+    aria-controls='navbarNav' aria-expended='false' aria-lable='Toggle navigation'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarNav'>
+    <ul class='navbar-nav'>
+        <li class='nav-item'>
+            <a class='nav-link' [routerLink]="'/'" [routerLinkActive]="'active'" [routerLinkActiveOptions]=
+            '{exact:true}'>Главная<span class="sr-only">(current)</span></a>
+        </li>
+        <li class='nav-item'>
+            <a class='nav-link' [routerLink]="'/spisok_pokupok'" [routerLinkActive]="'active'" [routerLinkActiveOptions]=
+            '{exact:true}'>Список покупок<span class="sr-only">(current)</span></a>
+        </li>
+        <li class='nav-item'>
+            <a class='nav-link' [routerLink]="'/add_product'" [routerLinkActive]="'active'" [routerLinkActiveOptions]=
+            '{exact:true}'>Добавить продукты в список<span class="sr-only">(current)</span></a>
+        </li>
+        <li class='nav-item'>
+            <a class='nav-link' [routerLink]="'/edit_product'" [routerLinkActive]="'active'" [routerLinkActiveOptions]=
+            '{exact:true}'>Редактировать или удалить запись<span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+</div>
+</nav>
+</header>

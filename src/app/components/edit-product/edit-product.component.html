@@ -1,0 +1,30 @@
+<div class="row mb-3 mt-5 ml-5">
+    <div class="col-12">
+        <h2>Редактировать или удалить запись</h2>
+    </div>
+    <form [formGroup]="myEditForm">
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" placeholder="id" formControlName="id" [(ngModel)]="id">
+        </div>
+        <div class="col-12 mt-2">
+            <input type="text" placeholder="Новое название" class="form-control" formControlName="title" [(ngModel)]="title">
+        </div>
+        <div class="col-12 mt-2">
+            <input type="text" placeholder="Новое количество" class="form-control" formControlName="count" [(ngModel)]="count">
+        </div>
+        <div class="col-12 mt-2">
+            <p class="ml-5">Куплено/Некуплено</p>
+            <input type="checkbox" class="form-control check" formControlName="status" [(ngModel)]="status">
+        </div>
+    </form>
+    <div class="col-12 mt-2"><button [disabled]="myEditForm.invalid" class="btn btn-warning btn-sm" (click)
+        ="onEditProduct()">Редактировать</button></div>
+
+        <form [formGroup]="formForDelete">
+            <div class="col-12 mt-5"><input type="text" placeholder="id" formControlName="idForDelete"
+            class="form-control" [(ngModel)]="idForDelete">
+            <div class="col-12 mt-2"><button [disabled]="formForDelete.invalid" class="btn btn-danger btn-sm"
+            (click)="onDeleteProduct()"></button> </div>
+         </div>
+        </form>
+</div>

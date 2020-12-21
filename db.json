@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Огурцы",
+      "count": 128,
+      "status": false
+    },
+    {
+      "id": 2,
+      "title": "Газировка",
+      "count": 2,
+      "status": false
+    },
+    {
+      "id": 3,
+      "title": "Инжир",
+      "count": 12,
+      "status": false
+    },
+    {
+      "id": 4,
+      "title": "Бананы",
+      "count": "2",
+      "status": false
+    },
+    {
+      "id": 5,
+      "title": "Влад",
+      "count": "1",
+      "status": true
+    }
+  ]
+}
